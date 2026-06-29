@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3b3a2f;
+    background-color: #f3efe6;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+/*****LOGO*****/
+header {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #3b3a2f;
+}
+
+.logo {
+    width: 150px;
+    height: 70px;
+    background-image: url("images/logo-placeholder.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*****NAVIGATION BAR*****/
+
+nav {
+    border-bottom: 1px solid #3b3a2f;
+    padding: 10px 18px;
+    background-color: #d8c9b7;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: #3b3a2f;
+    text-decoration: none;
+}
+
+
+/*****HERO VIDEO*****/
+
+.hero-video {
+    width: 100%;
+    height: 310px;
+    border-bottom: 1px solid #3b3a2f;
+    background-image: url("videos/apartment-style-video-placeholder.mp4");
+    background-color: #f8f6f2;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-video::after {
+    content: "Video";
+    font-size: 14px;
+}
+
+/*****INTRO SECTION*****/
+
+.intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    padding: 20px 25px;
+    border-bottom: 1px solid #3b3a2f;
+}
+
+.intro h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+.intro p {
+    max-width: 620px;
+    margin: 0;
+    line-height: 1.35;
+}
+
+.intro-image {
+    width: 200px;
+    height: 200px;
+    justify-self: center;
+    background-image: url("images/intro-placeholder.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #3b3a2f;
+}
+
+/*****IMAGE CAROUSEL*****/
+.carousel {
+    padding: 18px 15px 45px;
+    border-bottom: 1px solid #3b3a2f;
+}
+
+.carousel h2 {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0 0 45px;
+}
+
+.carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-images {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.carousel-image {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #3b3a2f;
+}
+
+.carousel-image:nth-child(1) {
+    background-image: url("images/page-preview-1.jpg");
+}
+
+.carousel-image:nth-child(2) {
+    background-image: url("images/page-preview-2.jpg");
+}
+
+.carousel-image:nth-child(3) {
+    background-image: url("images/page-preview-3.jpg");
+}
+
+
+/*****QUIZ*****/
+
+.quiz-section-home {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    min-height: 400px;
+    border-bottom: 1px solid #3b3a2f;
+}
+
+.quiz-slideshow-home {
+    background-image: url("images/quiz-slideshow-placeholder.jpg");
+    background-size: cover;
+    background-position: center;
+    border-right: 1px solid #3b3a2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-slideshow-home::after {
+    content: "Image Slideshow";
+}
+
+.quiz-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+
+.quiz-text h2 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.quiz-text p {
+    max-width: 360px;
+    margin-bottom: 25px;
+}
+
+.quiz-text a {
+    width: fit-content;
+    color: #f8f6f2;
+    text-decoration: none;
+    border: 1px solid #a55a43;
+    padding: 12px 35px;
+    border-radius: 6px;
+    background-color: #a55a43;
+}
+
+/*****FOOTER*****/
+
+footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 35px 28px 15px;
+    font-size: 0.9rem;
+    color: #8a8b6a;
+    background-color: #d1c3b1;
+}
+
+footer a {
+    color: #3b3a2f;
+    text-decoration: none;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/*****MOBILE*****/
+
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .intro,
+    .quiz-section,
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        gap: 25px;
+    }
+
+    .carousel-images {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .quiz-slideshow {
+        min-height: 260px;
+        border-right: none;
+        border-bottom: 1px solid #3b3a2f;
+    }
+}
